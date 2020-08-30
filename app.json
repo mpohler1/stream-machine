@@ -1,0 +1,12 @@
+{
+  "name": "StreamMachine",
+  "displayName": "StreamMachine",
+  "expo": {
+    "name": "StreamMachine",
+    "slug": "StreamMachine",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
