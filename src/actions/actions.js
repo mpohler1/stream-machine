@@ -1,4 +1,6 @@
-import {SET_APP_IS_READY} from "./actionTypes";
+import {
+    SET_APP_IS_READY
+} from "./actionTypes";
 
 export const setAppIsReady = (appIsReady) => (
     {

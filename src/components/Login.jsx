@@ -1,17 +1,21 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import * as React from 'react';
+import {WebView} from 'react-native-webview';
+import {connect} from "react-redux";
+import {LOGIN_URL} from "../resources/loginUrl";
 
 class Login extends React.Component {
 
     render() {
         return (
-            <View>
-                <Text>
-                    Login
-                </Text>
-            </View>
-        )
+            <WebView source={{uri: LOGIN_URL}}/>
+        );
     }
 }
 
-export default Login;
+const mapStateToProps = state => {
+    return {
+
+    };
+};
+
+export default connect(mapStateToProps, {})(Login);

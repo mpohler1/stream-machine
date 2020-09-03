@@ -1,9 +1,16 @@
-import React from 'react';
+import * as React from 'react';
 import * as SplashScreen from "expo-splash-screen";
 import {connect} from "react-redux";
-import {setAppIsReady} from "../actions/actions";
+import {
+    setAppIsReady
+} from "../actions/actions";
 
 class Splash extends React.Component {
+
+    prepareResources = async () => {
+        this.props.setAppIsReady(true);
+        await SplashScreen.hideAsync();
+    };
 
     async componentDidMount() {
         try {
@@ -13,11 +20,6 @@ class Splash extends React.Component {
         }
         this.prepareResources();
     }
-
-    prepareResources = async () => {
-        this.props.setAppIsReady(true);
-        await SplashScreen.hideAsync();
-    };
 
     render() {
         return (

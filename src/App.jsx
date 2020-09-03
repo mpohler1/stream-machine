@@ -1,5 +1,5 @@
-import React from 'react';
-import {connect, Provider} from "react-redux";
+import * as React from 'react';
+import {Provider} from "react-redux";
 import store from "./store/store";
 import registerRootComponent from "expo/build/launch/registerRootComponent";
 import {NavigationContainer} from '@react-navigation/native';
@@ -26,7 +26,7 @@ class App extends React.Component {
             <Provider store={store}>
                 <Splash/>
                 <NavigationContainer>
-                    <Stack.Navigator initialRouteName={PLAYLIST_SELECTOR_ROUTE}>
+                    <Stack.Navigator initialRouteName={LOGIN_ROUTE}>
                         <Stack.Screen name={LOGIN_ROUTE} component={Login} />
                         <Stack.Screen name={PLAYLIST_SELECTOR_ROUTE} component={PlaylistSelector} />
                         <Stack.Screen name={PLAYLIST_BUILDER_ROUTE} component={PlaylistBuilder} />
